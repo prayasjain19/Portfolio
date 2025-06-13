@@ -7,21 +7,33 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState("");
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Detect scroll and change navbar background
   useEffect(() => {
+    const sectionIds = menuItems.map((item) => item.id);
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+
+      // Determine which section is currently in view
+      for (let id of sectionIds) {
+        const section = document.getElementById(id);
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            setActiveSection(id);
+            break;
+          }
+        }
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Smooth scroll function
+
   const handleMenuItemClick = (sectionId) => {
     setActiveSection(sectionId);
     setIsOpen(false);
-
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
@@ -38,18 +50,17 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[20vw] ${
-        isScrolled ? "bg-[#050414] bg-opacity-50 backdrop-blur-md shadow-md" : "bg-transparent"
-      }`}
+      className={`fixed top-0 w-full z-50 transition duration-300 px-[7vw] md:px-[7vw] lg:px-[20vw] ${isScrolled ? "bg-[#050414] bg-opacity-50 backdrop-blur-md shadow-md" : "bg-transparent"
+        }`}
     >
       <div className="text-white py-5 flex justify-between items-center">
         {/* Logo */}
         <div className="text-lg font-semibold cursor-pointer">
-          <span className="text-[#8245ec]">&lt;</span>
+          <span className="text-[#04D9FF]">&lt;</span>
           <span className="text-white">Prayas</span>
-          <span className="text-[#8245ec]">/</span>
+          <span className="text-[#04D9FF]">/</span>
           <span className="text-white">Jain</span>
-          <span className="text-[#8245ec]">&gt;</span>
+          <span className="text-[#04D9FF]">&gt;</span>
         </div>
 
         {/* Desktop Menu */}
@@ -57,9 +68,8 @@ const Navbar = () => {
           {menuItems.map((item) => (
             <li
               key={item.id}
-              className={`cursor-pointer hover:text-[#8245ec] ${
-                activeSection === item.id ? "text-[#8245ec]" : ""
-              }`}
+              className={`cursor-pointer hover:text-[#04D9FF] ${activeSection === item.id ? "text-[#04D9FF]" : ""
+                }`}
             >
               <button onClick={() => handleMenuItemClick(item.id)}>
                 {item.label}
@@ -74,7 +84,7 @@ const Navbar = () => {
             href="https://github.com/prayasjain19"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-300 hover:text-[#8245ec]"
+            className="text-gray-300 hover:text-[#04D9FF]"
           >
             <FaGithub size={24} />
           </a>
@@ -82,7 +92,7 @@ const Navbar = () => {
             href="https://www.linkedin.com/in/prayas-jain19"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-300 hover:text-[#8245ec]"
+            className="text-gray-300 hover:text-[#04D9FF]"
           >
             <FaLinkedin size={24} />
           </a>
@@ -92,12 +102,12 @@ const Navbar = () => {
         <div className="md:hidden">
           {isOpen ? (
             <FiX
-              className="text-3xl text-[#8245ec] cursor-pointer"
+              className="text-3xl text-[#04D9FF] cursor-pointer"
               onClick={() => setIsOpen(false)}
             />
           ) : (
             <FiMenu
-              className="text-3xl text-[#8245ec] cursor-pointer"
+              className="text-3xl text-[#04D9FF] cursor-pointer"
               onClick={() => setIsOpen(true)}
             />
           )}
@@ -111,9 +121,8 @@ const Navbar = () => {
             {menuItems.map((item) => (
               <li
                 key={item.id}
-                className={`cursor-pointer hover:text-white ${
-                  activeSection === item.id ? "text-[#8245ec]" : ""
-                }`}
+                className={`cursor-pointer hover:text-white ${activeSection === item.id ? "text-[#04D9FF]" : ""
+                  }`}
               >
                 <button onClick={() => handleMenuItemClick(item.id)}>
                   {item.label}
