@@ -213,24 +213,24 @@ export const SkillsInfo = [
       github: "https://github.com/prayasjain19/Youtube-Clone",
       webapp: "https://youtube-clone-one-omega.vercel.app",
     },
-    {
-      id: 4,
-      title: "Task Reminder Chrome Extension Tool",
-      description:
-        "A productivity-boosting Chrome extension designed to help users manage and remember their daily tasks. Built using JavaScript, it offers a simple interface with reminders and task notifications to keep users on track.",
-      image: taskremLogo,
-      tags: ["JavaScript", "Chrome Extension", "HTML", "CSS"],
-      github: "https://github.com/codingmastr/Task-Reminder-Tool",
-      webapp: "chrome://extensions/?id=kngheeibjnnidhfoomkpnbeghackheci",
-    },
-    {
-      id: 5,
-      title: "Webverse Digital",
-      description:
-        "The official website for Webverse Digital, a creative digital marketing agency. Built using HTML, CSS, and JavaScript, it features visually appealing animations and a clean design to showcase the agency's services.",
-      image: webverLogo,
-      tags: ["HTML", "CSS", "JavaScript", "Framer Motion"],
-      github: "https://github.com/codingmastr/Webverse-Digital",
-      webapp: "https://webversedigital.com/",
-    },
+    // {
+    //   id: 4,
+    //   title: "Task Reminder Chrome Extension Tool",
+    //   description:
+    //     "A productivity-boosting Chrome extension designed to help users manage and remember their daily tasks. Built using JavaScript, it offers a simple interface with reminders and task notifications to keep users on track.",
+    //   image: taskremLogo,
+    //   tags: ["JavaScript", "Chrome Extension", "HTML", "CSS"],
+    //   github: "https://github.com/codingmastr/Task-Reminder-Tool",
+    //   webapp: "chrome://extensions/?id=kngheeibjnnidhfoomkpnbeghackheci",
+    // },
+    // {
+    //   id: 5,
+    //   title: "Webverse Digital",
+    //   description:
+    //     "The official website for Webverse Digital, a creative digital marketing agency. Built using HTML, CSS, and JavaScript, it features visually appealing animations and a clean design to showcase the agency's services.",
+    //   image: webverLogo,
+    //   tags: ["HTML", "CSS", "JavaScript", "Framer Motion"],
+    //   github: "https://github.com/codingmastr/Webverse-Digital",
+    //   webapp: "https://webversedigital.com/",
+    // },
   ];  
