@@ -175,13 +175,13 @@ export const SkillsInfo = [
   export const projects = [
     {
       id: 0,
-      title: "Study Notion - An EdTech Platform",
+      title: "Learn Expert - Your Learning Platform",
       description:
-        "StudyNotion is a fully functional EdTech web app where instructors can create, manage, and upload course content, while students can explore, purchase, and learn from interactive courses. It features role-based authentication, a smooth payment flow using Razorpay, and media uploads via Cloudinary. Built with the MERN stack and styled using Tailwind CSS, this project reflects the core functionality of modern platforms like Udemy or Coursera.",
+        "LearnExpert is a fully functional EdTech web app where instructors can create, manage, and upload course content, while students can explore, purchase, and learn from interactive courses. It features role-based authentication, a smooth payment flow using Razorpay, and media uploads via Cloudinary. Built with the MERN stack and styled using Tailwind CSS, this project reflects the core functionality of modern platforms like Udemy or Coursera.",
       image: studynotionlogo,
       tags: ["React JS", "Node.js", "MongoDB", "Express", "HTML", "CSS", "JavaScript"],
-      github: "https://github.com/prayasjain19/StudyNotion_PlatForm",
-      webapp: "https://studynotion-platform.onrender.com/",
+      github: "https://github.com/prayasjain19/Learn_Expert-Platform",
+      webapp: "https://learn-expert-platform.onrender.com/",
     },
     {
       id: 1,
