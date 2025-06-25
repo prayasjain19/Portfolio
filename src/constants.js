@@ -47,6 +47,7 @@ import taskremLogo from './assets/work_logo/task_rem.png';
 
 import webverLogo from './assets/work_logo/web_dig.png';
 import studynotionlogo from './assets/work_logo/studynotion.png';
+import learnexpert from './assets/work_logo/learnexpert.png'
 import flexgymlogo from './assets/work_logo/flexgym.png';
 import youtubelogo from './assets/work_logo/youtubeclone.png';
 
@@ -178,7 +179,7 @@ export const SkillsInfo = [
       title: "Learn Expert - Your Learning Platform",
       description:
         "LearnExpert is a fully functional EdTech web app where instructors can create, manage, and upload course content, while students can explore, purchase, and learn from interactive courses. It features role-based authentication, a smooth payment flow using Razorpay, and media uploads via Cloudinary. Built with the MERN stack and styled using Tailwind CSS, this project reflects the core functionality of modern platforms like Udemy or Coursera.",
-      image: studynotionlogo,
+      image: learnexpert,
       tags: ["React JS", "Node.js", "MongoDB", "Express", "HTML", "CSS", "JavaScript"],
       github: "https://github.com/prayasjain19/Learn_Expert-Platform",
       webapp: "https://learn-expert-platform.onrender.com/",
