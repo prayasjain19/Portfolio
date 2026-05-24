@@ -24,6 +24,7 @@ const Footer = () => {
             { name: "Experience", id: "experience" },
             { name: "Projects", id: "work" },
             { name: "Education", id: "education" },
+            { name: "Certifications", id: "certifications" },
           ].map((item, index) => (
             <button
               key={index}
@@ -58,7 +59,7 @@ const Footer = () => {
 
         {/* Copyright Text */}
         <p className="text-sm text-gray-400 mt-6">
-          © 2025 Prayas Jain. All rights reserved.
+          © 2026 Prayas Jain. All rights reserved.
         </p>
       </div>
     </footer>

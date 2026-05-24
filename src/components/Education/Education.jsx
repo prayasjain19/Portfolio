@@ -31,9 +31,9 @@ const Education = () => {
           >
             {/* Education Card */}
             <div
-              className={`w-full sm:max-w-md p-4 sm:p-8 rounded-2xl border border-[#04D9FF]/20 bg-[#0a0a23]/70 backdrop-blur-md shadow-[0_0_20px_1px_#04D9FF] ${
+            className={`relative z-10 w-full sm:max-w-md p-4 sm:p-8 rounded-2xl border border-[#04D9FF]/20 bg-[#0a0a23]/90 backdrop-blur-md shadow-[0_0_20px_1px_#04D9FF] ${
                 index % 2 === 0 ? "sm:ml-0" : "sm:mr-0"
-              } sm:ml-44 sm:mr-44 ml-8 transform transition-transform duration-300 hover:scale-105`}
+              } sm:mx-20 ml-8 transform transition-transform duration-300 hover:scale-105`}
             >
               {/* Flex container for image and text */}
               <div className="flex items-center space-x-6">

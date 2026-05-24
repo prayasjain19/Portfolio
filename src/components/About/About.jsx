@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactTypingEffect from 'react-typing-effect';
 import Tilt from 'react-parallax-tilt';
+import { stats } from '../../constants';
 
 const About = () => {
   return (
@@ -8,7 +9,7 @@ const About = () => {
       id="about"
       className="py-4 px-[7vw] md:px-[7vw] lg:px-[20vw] font-sans mt-16 md:mt-24 lg:mt-32"
     >
-      <div className="flex flex-col-reverse md:flex-row justify-between items-center">
+      <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-8 md:gap-4">
         {/* Left Side */}
         <div className="md:w-1/2 text-center md:text-left mt-8 md:mt-0">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-2 leading-tight">
@@ -23,9 +24,9 @@ const About = () => {
             <span className="text-white">I am a </span>
             <ReactTypingEffect
               text={[
-                'FullStack Developer',
+                'Full Stack Developer',
+                'Software Engineer',
                 'Front End Developer',
-                'Back End Developer',
                 'Coder',
               ]}
               speed={100}
@@ -39,11 +40,11 @@ const About = () => {
           </h3>
 
           <p className="text-base sm:text-lg md:text-lg text-gray-400 mb-10 mt-8 leading-relaxed">
-            I am a full-stack developer with nearly 3-5 months of experience in
-            building scalable web applications. Skilled in both front-end and
-            back-end development, I specialize in the MERN stack and other
-            modern technologies to create seamless user experiences and
-            efficient solutions.
+            Full Stack Developer with 9+ months of hands-on experience
+            shipping production-grade web applications. Currently building
+            headless e-commerce solutions at Webkul using Next.js and
+            GraphQL. I love turning complex business requirements into
+            clean, performant code that scales.
           </p>
 
           <a
@@ -63,7 +64,7 @@ const About = () => {
         {/* You can uncomment this part and update image later
         <div className="md:w-1/2 flex justify-center md:justify-end">
           <Tilt
-            className="w-48 h-48 sm:w-64 sm:h-64 md:w-[30rem] md:h-[30rem] border-4 border-[#04D9FF] rounded-full"
+            className="w-48 h-48 sm:w-64 sm:h-64 md:w-[22rem] md:h-[22rem] lg:w-[26rem] lg:h-[26rem] border-4 border-[#04D9FF] rounded-full overflow-hidden"
             tiltMaxAngleX={20}
             tiltMaxAngleY={20}
             perspective={1000}
@@ -79,6 +80,26 @@ const About = () => {
           </Tilt>
         </div>
         */}
+      </div>
+
+      {/* Stats / Achievements Strip */}
+      <div className="mt-20 grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        {stats.map((stat, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center justify-center p-6 bg-gray-900/40 backdrop-blur-md rounded-2xl border border-gray-800 shadow-[0_0_15px_1px_rgba(4,217,255,0.05)] hover:shadow-[0_0_20px_1px_rgba(4,217,255,0.25)] hover:border-[#04D9FF]/40 transition-all duration-300 group"
+          >
+            <span className="text-3xl sm:text-4xl font-extrabold text-[#04D9FF] group-hover:scale-110 transition-transform duration-300">
+              {stat.value}
+            </span>
+            <span className="text-sm font-semibold text-white mt-2 text-center">
+              {stat.label}
+            </span>
+            <span className="text-xs text-gray-500 mt-1 uppercase tracking-wider">
+              {stat.platform}
+            </span>
+          </div>
+        ))}
       </div>
     </section>
   );
