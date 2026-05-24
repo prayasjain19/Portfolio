@@ -20,7 +20,7 @@ import graphqlLogo from './assets/tech_logo/graphql.png';
 import mysqlLogo from './assets/tech_logo/mysql.png';
 import mongodbLogo from './assets/tech_logo/mongodb.png';
 import restlogo from './assets/tech_logo/rest.png'
-import postgreslogo from './assets/tech_logo/postgres.png'
+import postgreslogo from './assets/tech_logo/Postgres.png'
 
 // DevOps & Tools
 import gitLogo from './assets/tech_logo/git.png';
